@@ -58,3 +58,8 @@ yourself to what this repo currently offers in terms of learning path.
 
 Update the Learning_Plan.md with the current implementation status. But keep
 it short, don't add additional chapter, but just mark the WP1 as completed.
+
+---
+
+Please add some (not too many) emojis to the README.md and LEARNING_PATH.md.
+For each emoji, present options and let me choose.
