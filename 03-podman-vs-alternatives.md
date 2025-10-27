@@ -2,9 +2,17 @@
 
 ## Overview
 
-This document provides a detailed comparative analysis of Podman against various containerization and virtualization alternatives. As containerization has evolved from simple process isolation to complex orchestration platforms, understanding the strengths and trade-offs of different approaches is crucial for making informed architectural decisions.
+This document provides a detailed comparative analysis of Podman against various
+containerization and virtualization alternatives. As containerization has evolved
+from simple process isolation to complex orchestration platforms, understanding the
+strengths and trade-offs of different approaches is crucial for making informed
+architectural decisions.
 
-Podman has emerged as a significant player in the container ecosystem, particularly distinguishing itself through its daemonless architecture and rootless container capabilities. This analysis examines how Podman compares to other container runtimes, Docker as the incumbent solution, and broader deployment approaches including virtual machines and bare metal infrastructure.
+Podman has emerged as a significant player in the container ecosystem, particularly
+distinguishing itself through its daemonless architecture and rootless container
+capabilities. This analysis examines how Podman compares to other container runtimes,
+Docker as the incumbent solution, and broader deployment approaches including virtual
+machines and bare metal infrastructure.
 
 ## 🐳 Podman vs Docker: Detailed Comparison
 
@@ -124,7 +132,7 @@ docker/podman ps
 - **Scope**: Exclusively for Kubernetes environments
 - **Design**: Minimal, security-focused
 
-#### Comparison Matrix
+#### CRI-O Comparison Matrix
 
 | Feature                  | Podman                       | CRI-O                    |
 | ------------------------ | ---------------------------- | ------------------------ |
@@ -186,19 +194,19 @@ docker/podman ps
 - **Cons**: Shared kernel, potential container escapes
 - **Use Case**: Cloud-native applications, DevOps workflows
 
-#### Performance Characteristics
+#### Deployment Performance Characteristics
 
 ##### CPU Performance
 
-```
+```text
 Bare Metal: 100% (baseline)
 VMs:        92-98% (virtualization overhead)
 Containers: 97-99% (minimal runtime overhead)
 ```
 
-##### I/O Performance
+##### Storage I/O Performance
 
-```
+```text
 Bare Metal: 100% (direct hardware access)
 VMs:        80-95% (hypervisor overhead)
 Containers: 95-99% (kernel namespace overhead)
@@ -206,13 +214,11 @@ Containers: 95-99% (kernel namespace overhead)
 
 ##### Network Performance
 
-```
+````text
 Bare Metal: 100% (direct network stack)
 VMs:        85-95% (virtual network overhead)
 Containers: 90-98% (depends on networking mode)
-```
-
-### When to Choose Each Approach
+```### When to Choose Each Approach
 
 #### Choose Bare Metal When
 
@@ -250,7 +256,7 @@ Docker:     2.3 seconds (daemon + container)
 Podman:     0.8 seconds (direct exec)
 containerd: 1.1 seconds (via ctr tool)
 CRI-O:      1.4 seconds (via crictl)
-```
+````
 
 #### Memory Usage Baseline
 
@@ -299,7 +305,7 @@ Buildah:         3m 54s
 
 #### Local Development
 
-**Recommendation: Podman**
+##### Recommendation: Podman
 
 - **Reasons**:
   - No daemon overhead on developer laptops
@@ -309,7 +315,7 @@ Buildah:         3m 54s
 
 #### Multi-Developer Teams
 
-**Recommendation: Docker or Podman**
+##### Recommendation: Docker or Podman
 
 - **Docker Benefits**: Wider tooling ecosystem, familiar workflows
 - **Podman Benefits**: Better security, resource efficiency
@@ -319,7 +325,7 @@ Buildah:         3m 54s
 
 #### Kubernetes Clusters
 
-**Recommendation: CRI-O or containerd**
+##### Recommendation: CRI-O or containerd
 
 - **CRI-O**: Kubernetes-optimized, minimal attack surface
 - **containerd**: Industry standard, comprehensive ecosystem
@@ -327,7 +333,7 @@ Buildah:         3m 54s
 
 #### Edge Computing
 
-**Recommendation: Podman**
+##### Recommendation: Podman for Edge
 
 - **Reasons**:
   - Minimal resource footprint
@@ -337,7 +343,7 @@ Buildah:         3m 54s
 
 #### High-Performance Computing
 
-**Recommendation: Apptainer/Singularity or Podman**
+##### Recommendation: Apptainer/Singularity or Podman
 
 - **Apptainer**: HPC-specific features, unprivileged execution
 - **Podman**: General-purpose with good HPC characteristics
@@ -347,7 +353,7 @@ Buildah:         3m 54s
 
 #### Legacy System Integration
 
-**Recommendation: Virtual Machines + Containers**
+##### Recommendation: Virtual Machines + Containers
 
 - **Hybrid Approach**: VMs for legacy, containers for new applications
 - **Migration Strategy**: Gradual containerization of suitable workloads
@@ -355,7 +361,7 @@ Buildah:         3m 54s
 
 #### Compliance-Heavy Environments
 
-**Recommendation: Context-Dependent**
+##### Recommendation: Context-Dependent
 
 - **High Security**: Bare metal or VMs with strong isolation
 - **Agile Development**: Containers with enhanced security (SELinux, gVisor)
@@ -528,6 +534,12 @@ docker stats test-docker
 4. **Plan Migration**: Develop phased approach with rollback plans
 5. **Monitor and Optimize**: Continuous improvement based on operational experience
 
-The container ecosystem continues to evolve rapidly, with each runtime targeting specific use cases and operational requirements. Podman's daemonless architecture and security-first approach make it particularly well-suited for development environments and security-conscious organizations, while maintaining compatibility with existing Docker-based workflows.
+The container ecosystem continues to evolve rapidly, with each runtime targeting
+specific use cases and operational requirements. Podman's daemonless architecture
+and security-first approach make it particularly well-suited for development
+environments and security-conscious organizations, while maintaining compatibility
+with existing Docker-based workflows.
 
-Understanding these trade-offs enables informed decision-making that balances security, performance, operational complexity, and team capabilities to achieve optimal outcomes for specific organizational contexts.
+Understanding these trade-offs enables informed decision-making that balances
+security, performance, operational complexity, and team capabilities to achieve
+optimal outcomes for specific organizational contexts.
