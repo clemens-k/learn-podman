@@ -71,6 +71,12 @@ npm run quality
 
 This educational content is provided under the MIT License. See LICENSE file for details.
 
+## Disclaimer
+
+Most of the information presented in this repo is collected and summarized by
+Claude Sonnet 4, so please take any information with a grain of salt. If you find wrong
+information, please create an issue or pull request!
+
 ---
 
 _This is a living learning repository. Contributions, improvements, and feedback are always
