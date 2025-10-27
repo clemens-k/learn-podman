@@ -1,11 +1,11 @@
 {
-  "recommendations": [
-    "davidanson.vscode-markdownlint",
-    "yzhang.markdown-all-in-one",
-    "bierner.markdown-preview-enhanced",
-    "ms-vscode.vscode-json",
-    "redhat.vscode-yaml",
-    "ms-python.python",
-    "ms-vscode-remote.remote-containers"
-  ]
+    "recommendations": [
+        "davidanson.vscode-markdownlint",
+        "yzhang.markdown-all-in-one",
+        "bierner.markdown-preview-enhanced",
+        "ms-vscode.vscode-json",
+        "redhat.vscode-yaml",
+        "ms-python.python",
+        "ms-vscode-remote.remote-containers"
+    ]
 }

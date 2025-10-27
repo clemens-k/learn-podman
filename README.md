@@ -1,55 +1,27 @@
 # Podman Learning Journey
 
-A comprehensive learning repository for mastering Podman container technology, organized as a
-structured educational journey with hands-on examples and best practices.
+A comprehensive learning repository for mastering Podman container technology, focusing on its foundation, history, and evolution in the container ecosystem.
 
-## Quick Start
+## What You'll Learn
 
-### Prerequisites
+This repository currently provides:
 
-- Node.js (for development tools)
-- Python 3.x (for pre-commit hooks)
-- Git
-- VS Code (recommended)
-
-### Setup
-
-```bash
-# Clone the repository
-git clone <repository-url>
-cd learn-podman
-
-# Install dependencies
-npm install
-
-# Set up pre-commit hooks
-pip install pre-commit
-pre-commit install
-
-# Install recommended VS Code extensions
-# (VS Code will prompt you automatically)
-```
+- **Foundation and History**: Complete overview of Podman's origins at Red Hat, evolution from Docker alternative to modern container runtime, and position in the container ecosystem
+- **Technical Timeline**: Detailed timeline of major releases and features from early development to current state
+- **Community and Contributors**: Understanding of the key people and organizations behind Podman
+- **Ecosystem Relationships**: How Podman relates to CRI-O, Buildah, and other container tools
 
 ## Repository Structure
 
-- **docs/** - Learning documentation organized by work packages
-- **examples/** - Practical examples and sample configurations
-- **scripts/** - Utility scripts for common tasks
-- **.github/** - GitHub Actions workflows for quality assurance
-- **.vscode/** - VS Code workspace settings and extension recommendations
+- **01-history-and-evolution.md** - Complete foundation document covering Podman's journey
+- **LEARNING_PLAN.md** - [Inernal] Detailed work package structure and implementation tracking
+- **QUALITY_GUIDELINES.md** - [Internal] Documentation standards and contributing guidelines
 
-## Learning Path
+## Getting Started
 
-Follow the structured learning plan outlined in [`LEARNING_PLAN.md`](LEARNING_PLAN.md):
-
-1. **WP1**: Foundation and History
-2. **WP2**: Comparative Analysis
-3. **WP3**: Red Hat In-Vehicle OS Integration
-4. **WP4**: Migration Strategies
-5. **WP5**: OCI Containers Deep Dive
-6. **WP6**: Resource Collection
-7. **WP7**: Command Reference and Practical Guide
-8. **WP8**: System Integration and Autostart
+1. Start with [`01-history-and-evolution.md`](01-history-and-evolution.md) to understand Podman's foundation
+2. Review [`LEARNING_PLAN.md`](LEARNING_PLAN.md) to see the overall learning journey structure
+3. Follow quality guidelines in [`QUALITY_GUIDELINES.md`](QUALITY_GUIDELINES.md) if contributing
 
 ## Quality Standards
 

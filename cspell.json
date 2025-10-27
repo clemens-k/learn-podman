@@ -1,36 +1,36 @@
 {
-  "version": "0.2",
-  "language": "en",
-  "words": [
-    "podman",
-    "buildah",
-    "skopeo",
-    "containerfiles",
-    "systemd",
-    "quadlet",
-    "rootless",
-    "namespaces",
-    "runc",
-    "containerd",
-    "kubernetes",
-    "redhat",
-    "invehicle",
-    "autostart",
-    "markdownlint",
-    "cspell",
-    "vscode",
-    "github",
-    "clemens",
-    "davidanson",
-    "yzhang"
-  ],
-  "ignorePaths": [
-    "node_modules/**",
-    ".git/**",
-    "*.log"
-  ],
-  "ignoreRegExpList": [
-    "/\\bhttps?://[^\\s]+/g",
-    "/\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}\\b/gi"
-  ]
+    "version": "0.2",
+    "language": "en",
+    "words": [
+        "podman",
+        "buildah",
+        "skopeo",
+        "containerfiles",
+        "systemd",
+        "quadlet",
+        "rootless",
+        "namespaces",
+        "runc",
+        "containerd",
+        "kubernetes",
+        "redhat",
+        "invehicle",
+        "autostart",
+        "markdownlint",
+        "cspell",
+        "vscode",
+        "github",
+        "clemens",
+        "davidanson",
+        "yzhang"
+    ],
+    "ignorePaths": [
+        "node_modules/**",
+        ".git/**",
+        "*.log"
+    ],
+    "ignoreRegExpList": [
+        "/\\bhttps?://[^\\s]+/g",
+        "/\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}\\b/gi"
+    ]
 }

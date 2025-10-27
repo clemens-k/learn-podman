@@ -44,3 +44,17 @@ Please add a .gitignore file.
 ---
 
 Please create a commit and a short (5 lines max) commit message
+
+---
+
+Please start with work package 1: Foundation and History
+
+---
+Before we create a PR, I would like to separate "work package description and
+implementation tracking" (LEARNING_PLAN.md) and the "User documentation" (README.md).
+
+Please remove any hints in the README.md of what is about to come, but limit
+yourself to what this repo currently offers in terms of learning path.
+
+Update the Learning_Plan.md with the current implementation status. But keep
+it short, don't add additional chapter, but just mark the WP1 as completed.
