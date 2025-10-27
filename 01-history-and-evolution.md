@@ -2,38 +2,55 @@
 
 ## Introduction
 
-This document covers the foundation and history of Podman, exploring its origins at Red Hat, evolution through major releases, key contributors, and its position within the broader container ecosystem.
+This document covers the foundation and history of Podman, exploring its origins at Red Hat,
+evolution through major releases, key contributors, and its position within the broader
+container ecosystem.
 
 ## Origins of Podman at Red Hat
 
 ### Background and Motivation
 
-Podman emerged from Red Hat's need to address fundamental security and architectural concerns with existing container tools, particularly Docker. The project was born out of the recognition that the Docker daemon model presented several challenges:
+Podman emerged from Red Hat's need to address fundamental security and architectural
+concerns with existing container tools, particularly Docker. The project was born out
+of the recognition that the Docker daemon model presented several challenges:
 
-- **Single Point of Failure**: The Docker daemon represented a central point of failure that could affect all containers on a system
-- **Root Privilege Requirements**: All Docker operations required root-level access, creating security concerns
-- **Process Ownership**: The daemon owned all child container processes, leading to potential orphaned processes on failure
-- **Security Vulnerabilities**: The building of containers could introduce security risks due to the privileged nature of the daemon
+- **Single Point of Failure**: The Docker daemon represented a central point of failure that
+  could affect all containers on a system
+- **Root Privilege Requirements**: All Docker operations required root-level access,
+  creating security concerns
+- **Process Ownership**: The daemon owned all child container processes, leading to
+  potential orphaned processes on failure
+- **Security Vulnerabilities**: The building of containers could introduce security risks
+  due to the privileged nature of the daemon
 
 ### Key Founding Principles
 
 From its inception, Podman was designed around several core principles:
 
-1. **Daemonless Architecture**: Eliminate the need for a central daemon process by having Podman directly interact with the kernel
-2. **Rootless Containers**: Enable non-privileged users to run containers without requiring root access
-3. **OCI Compliance**: Full adherence to Open Container Initiative standards for container images and runtimes
+1. **Daemonless Architecture**: Eliminate the need for a central daemon process by having
+   Podman directly interact with the kernel
+2. **Rootless Containers**: Enable non-privileged users to run containers without
+   requiring root access
+3. **OCI Compliance**: Full adherence to Open Container Initiative standards for container
+   images and runtimes
 4. **Drop-in Compatibility**: Provide command-line compatibility with Docker to ease migration
-5. **Security by Design**: Implement security as a fundamental architectural principle rather than an add-on
+5. **Security by Design**: Implement security as a fundamental architectural principle
+   rather than an add-on
 
 ### Initial Development Team
 
-Podman was initially developed as part of the libpod project at Red Hat, with key founding contributors including:
+Podman was initially developed as part of the libpod project at Red Hat, with key founding
+contributors including:
 
-- **Dan Walsh** (@rhatdan): Principal architect and security expert who drove the vision for rootless containers and security-focused design
-- **Matt Heon** (@mheon): Core developer and maintainer who implemented much of the initial architecture
-- **Daniel J Walsh**: Security consultant who championed the user namespace approach and rootless container technology
+- **Dan Walsh** (@rhatdan): Principal architect and security expert who drove the vision for
+  rootless containers and security-focused design
+- **Matt Heon** (@mheon): Core developer and maintainer who implemented much of the initial
+  architecture
+- **Daniel J Walsh**: Security consultant who championed the user namespace approach and
+  rootless container technology
 
-The project benefited from Red Hat's extensive experience with container technologies through their work on:
+The project benefited from Red Hat's extensive experience with container technologies
+through their work on:
 
 - CRI-O (Container Runtime Interface for Kubernetes)
 - Buildah (container image building tool)
@@ -43,14 +60,14 @@ The project benefited from Red Hat's extensive experience with container technol
 
 ### Early Development (2017-2018)
 
-**Project Genesis (2017)**
+#### Project Genesis (2017)
 
 - Initial development began under the libpod project name
 - Focus on creating a daemon-free alternative to Docker
 - Early work on user namespace integration and rootless container support
 - Integration with existing Red Hat container tools ecosystem
 
-**First Public Releases (2018)**
+#### First Public Releases (2018)
 
 - **v0.1.x - Early Alpha Releases**: Basic container management functionality
 - **v0.5.x - Beta Phase**: Introduction of pod management capabilities
@@ -59,7 +76,7 @@ The project benefited from Red Hat's extensive experience with container technol
 
 ### Growth Phase (2019-2020)
 
-**Podman 1.0 Series (2019)**
+#### Podman 1.0 Series (2019)
 
 - **v1.0.0 (January 2019)**: First stable release with full rootless support on Fedora
 - **Key Features**:
@@ -68,13 +85,13 @@ The project benefited from Red Hat's extensive experience with container technol
   - Pod management with Kubernetes YAML compatibility
   - Integration with systemd for container lifecycle management
 
-**Podman 1.x Evolution (2019)**
+#### Podman 1.x Evolution (2019)
 
 - **v1.4.x**: Introduction of remote client capabilities
 - **v1.6.x**: Enhanced Kubernetes YAML support with `podman generate kube`
 - **v1.8.x**: Improved Windows and macOS remote client support
 
-**Podman 2.0 Series (2020)**
+#### Podman 2.0 Series (2020)
 
 - **v2.0.0 (June 2020)**: Major architectural overhaul
 - **Revolutionary Features**:
@@ -85,7 +102,7 @@ The project benefited from Red Hat's extensive experience with container technol
 
 ### Maturity and Enterprise Adoption (2021-2023)
 
-**Podman 3.x Series (2021)**
+#### Podman 3.x Series (2021)
 
 - **v3.0.0 (February 2021)**: Container ecosystem standardization
 - **Enterprise Features**:
@@ -94,7 +111,7 @@ The project benefited from Red Hat's extensive experience with container technol
   - Kubernetes operator support
   - Advanced networking with Netavark
 
-**Podman 4.x Series (2022)**
+#### Podman 4.x Series (2022)
 
 - **v4.0.0 (February 2022)**: Production readiness milestone
 - **Major Enhancements**:
@@ -103,7 +120,7 @@ The project benefited from Red Hat's extensive experience with container technol
   - Improved performance and resource management
   - Docker Compose v2 compatibility
 
-**Podman 4.x Evolution (2022-2023)**
+#### Podman 4.x Evolution (2022-2023)
 
 - **v4.3.x**: Introduction of Podman Desktop companion application
 - **v4.5.x**: Enhanced Kubernetes integration and YAML generation
@@ -111,7 +128,7 @@ The project benefited from Red Hat's extensive experience with container technol
 
 ### Recent Developments (2024-2025)
 
-**Podman 5.x Series (2024-2025)**
+#### Podman 5.x Series (2024-2025)
 
 - **v5.0.0 (March 2024)**: Next-generation architecture
 - **Current Features** (as of v5.6.2, October 2025):
@@ -129,15 +146,22 @@ The project benefited from Red Hat's extensive experience with container technol
 
 **Founding Team and Long-term Contributors:**
 
-- **Dan Walsh (@rhatdan)**: Principal Security Engineer at Red Hat and the visionary behind Podman's security-first approach. Dan championed rootless containers and user namespace technology, making Podman a leader in container security.
+- **Dan Walsh (@rhatdan)**: Principal Security Engineer at Red Hat and the visionary behind
+  Podman's security-first approach. Dan championed rootless containers and user namespace
+  technology, making Podman a leader in container security.
 
-- **Matt Heon (@mheon)**: Senior Software Engineer and lead maintainer, responsible for much of Podman's core architecture and development. Matt has been instrumental in designing the libpod library and maintaining API stability.
+- **Matt Heon (@mheon)**: Senior Software Engineer and lead maintainer, responsible for much
+  of Podman's core architecture and development. Matt has been instrumental in designing
+  the libpod library and maintaining API stability.
 
-- **Paul Holzinger**: Key contributor focusing on networking, storage, and cross-platform compatibility. Significant work on Netavark integration and Windows/macOS support.
+- **Paul Holzinger**: Key contributor focusing on networking, storage, and cross-platform
+  compatibility. Significant work on Netavark integration and Windows/macOS support.
 
-- **Giuseppe Scrivano (@giuseppe)**: Principal contributor working on rootless containers, cgroups integration, and performance optimizations.
+- **Giuseppe Scrivano (@giuseppe)**: Principal contributor working on rootless containers,
+  cgroups integration, and performance optimizations.
 
-- **Valentin Rothberg (@vrothberg)**: Core developer focusing on API development, remote client functionality, and systemd integration.
+- **Valentin Rothberg (@vrothberg)**: Core developer focusing on API development, remote
+  client functionality, and systemd integration.
 
 ### Community Growth
 
@@ -145,7 +169,8 @@ The project benefited from Red Hat's extensive experience with container technol
 
 - **2018-2019**: Small core team of Red Hat developers
 - **2020-2021**: Growing open source community with contributors from multiple organizations
-- **2022-2024**: Expanded to include developers from SUSE, IBM, Intel, and other major technology companies
+- **2022-2024**: Expanded to include developers from SUSE, IBM, Intel, and other major
+  technology companies
 - **2025**: Active community of 100+ regular contributors with thousands of community members
 
 **Geographic Distribution:**
@@ -181,13 +206,15 @@ The project benefited from Red Hat's extensive experience with container technol
 - **Government Sector**: U.S. Government agencies use Podman for secure HPC at scale
 - **Enterprise**: Major corporations adopt Podman for security-sensitive workloads
 - **Cloud Providers**: Integration with multiple cloud platforms and services
-- **Educational Institutions**: Universities and training organizations use Podman for container education
+- **Educational Institutions**: Universities and training organizations use Podman
+  for container education
 
 ## Relationship to CRI-O and Buildah
 
 ### The Container Tools Ecosystem
 
-Podman is part of a comprehensive container tools ecosystem developed by Red Hat and the broader community, often referred to as the "Container Tools" suite:
+Podman is part of a comprehensive container tools ecosystem developed by Red Hat and the
+broader community, often referred to as the "Container Tools" suite:
 
 **The Trilogy:**
 
@@ -231,7 +258,8 @@ Podman is part of a comprehensive container tools ecosystem developed by Red Hat
 
 **Podman + Buildah Relationship:**
 
-- Buildah provides specialized image building capabilities that exceed Podman's built-in `podman build`
+- Buildah provides specialized image building capabilities that exceed Podman's
+  built-in `podman build`
 - Podman focuses on runtime management while Buildah excels at image creation
 - Shared image storage means no duplication between tools
 - Users can build with Buildah and run with Podman seamlessly
@@ -272,11 +300,15 @@ Podman is part of a comprehensive container tools ecosystem developed by Red Hat
 
 **The Docker Alternative Narrative (2017-2019):**
 
-When Podman first emerged, it was primarily marketed and understood as a "Docker alternative" or "Docker replacement." This positioning was strategic and necessary for several reasons:
+When Podman first emerged, it was primarily marketed and understood as a "Docker alternative"
+or "Docker replacement." This positioning was strategic and necessary for several reasons:
 
-- **Familiar Entry Point**: Docker CLI compatibility (`alias docker=podman`) provided an easy migration path
-- **Direct Problem Addressing**: Clearly articulated solutions to Docker's architectural limitations
-- **Feature Parity Focus**: Initial development prioritized matching Docker's core functionality
+- **Familiar Entry Point**: Docker CLI compatibility (`alias docker=podman`) provided an
+  easy migration path
+- **Direct Problem Addressing**: Clearly articulated solutions to Docker's
+  architectural limitations
+- **Feature Parity Focus**: Initial development prioritized matching Docker's
+  core functionality
 - **Marketing Simplicity**: "Docker without the daemon" was an easily understood value proposition
 
 **Early Adoption Challenges:**
@@ -452,19 +484,34 @@ When Podman first emerged, it was primarily marketed and understood as a "Docker
 
 ## Conclusion
 
-Podman's journey from its origins as a security-focused alternative to Docker to its current status as a leading container platform demonstrates the power of open-source innovation and community-driven development. What began as a solution to address Docker's architectural limitations has evolved into a comprehensive container ecosystem that sets industry standards for security, performance, and enterprise adoption.
+Podman's journey from its origins as a security-focused alternative to Docker to its current
+status as a leading container platform demonstrates the power of open-source innovation and
+community-driven development. What began as a solution to address Docker's architectural
+limitations has evolved into a comprehensive container ecosystem that sets industry
+standards for security, performance, and enterprise adoption.
 
 Key achievements in Podman's evolution include:
 
-- **Security Leadership**: Pioneering rootless container technology and user namespace integration
-- **Architectural Innovation**: Demonstrating that daemonless container management is not only possible but superior
-- **Enterprise Adoption**: Becoming the preferred choice for security-conscious organizations and government agencies
-- **Community Growth**: Building a vibrant, diverse community of contributors and users worldwide
-- **Ecosystem Integration**: Creating a cohesive set of container tools that work seamlessly together
+- **Security Leadership**: Pioneering rootless container technology and user
+  namespace integration
+- **Architectural Innovation**: Demonstrating that daemonless container management is
+  not only possible but superior
+- **Enterprise Adoption**: Becoming the preferred choice for security-conscious
+  organizations and government agencies
+- **Community Growth**: Building a vibrant, diverse community of contributors
+  and users worldwide
+- **Ecosystem Integration**: Creating a cohesive set of container tools
+  that work seamlessly together
 
-As Podman continues to evolve, it remains committed to its founding principles of security, openness, and user empowerment while pushing the boundaries of what's possible in container technology. The project's future roadmap positions it to lead the next generation of container innovations, from edge computing to quantum-safe security, ensuring its relevance for years to come.
+As Podman continues to evolve, it remains committed to its founding principles of
+security, openness, and user empowerment while pushing the boundaries of what's possible
+in container technology. The project's future roadmap positions it to lead the next
+generation of container innovations, from edge computing to quantum-safe security,
+ensuring its relevance for years to come.
 
-For organizations and developers looking to adopt modern container technologies, Podman represents not just a tool, but a philosophy of how containers should be built, managed, and secured in today's complex computing environments.
+For organizations and developers looking to adopt modern container technologies, Podman
+represents not just a tool, but a philosophy of how containers should be built, managed,
+and secured in today's complex computing environments.
 
 ## References
 
@@ -477,7 +524,8 @@ For organizations and developers looking to adopt modern container technologies,
 
 ### Technical Articles and Papers
 
-- Walsh, D. J. (2019). "How does rootless Podman work?" _Opensource.com_. Retrieved from <https://opensource.com/article/19/2/how-does-rootless-podman-work>
+- Walsh, D. J. (2019). "How does rootless Podman work?" _Opensource.com_.
+  Retrieved from <https://opensource.com/article/19/2/how-does-rootless-podman-work>
 - Henry, W. (2019). "Podman and Buildah for Docker users." _Red Hat Developer Blog_.
 
 ### Community Resources
@@ -508,4 +556,4 @@ For organizations and developers looking to adopt modern container technologies,
 
 ---
 
-_Last updated: October 27, 2025_
+Last updated: October 27, 2025
