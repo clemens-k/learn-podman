@@ -1,0 +1,21 @@
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.markdownlint": "explicit"
+  },
+  "markdown.extension.toc.levels": "2..6",
+  "markdown.extension.toc.unorderedList.marker": "-",
+  "markdown.extension.list.indentationSize": "adaptive",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.rulers": [100],
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    }
+  }
+}

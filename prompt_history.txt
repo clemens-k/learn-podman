@@ -1,0 +1,46 @@
+AI Agent used: Claude Sonnet 4
+
+---
+
+Okay, I would like to learn more about podman and I want to document my
+learning journey in this repo.
+
+The things I am particular interested in are:
+
+- the history and evolution of podman
+- comparison with other virutalization techniques
+- the role it plays in Red Hats In-Vehicle Operating System
+- migration from "native" deployments to podman container
+- all I need to know about OCI containers
+- useful online resources
+- commonly used podman commands
+- how to autostart containers at system startup
+
+I prefer markdown files for documentation (because on github I can
+directly view them).
+
+Before you start working on those topics, please create a plan (in a markdown
+file) with work packages. I want to manually review it and possibly make
+adjustments, before you start working on those work packages.
+
+Do you have any other recommendation for me for this project?
+
+---
+
+Okay, you learning plan markdown file is not linted properly. How can we make
+sure all files in this repo uphold a certain quality standard?
+
+---
+
+Nice. Before we proceed: there is one more topic I interested in: how does the
+tecstack of podman look like. Or in other words: what are the dependencies
+(hardware and software) of podman. For hardware prerequisites: I am interested
+in ARM and Intel architecture.
+
+---
+
+Please add a .gitignore file.
+
+---
+
+Please create a commit and a short (5 lines max) commit message
