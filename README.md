@@ -13,18 +13,26 @@ This repository currently provides:
   to current state
 - **Community and Contributors**: Understanding of the key people and organizations behind Podman
 - **Ecosystem Relationships**: How Podman relates to CRI-O, Buildah, and other container tools
+- **Technology Stack**: Deep dive into Podman's architecture, dependencies, operating system
+  requirements, and hardware compatibility across different platforms
+- **Comparative Analysis**: Comprehensive comparison of Podman vs Docker, other container runtimes
+  (containerd, CRI-O), and deployment approaches (containers vs VMs vs bare metal)
 
 ## 📂 Repository Structure
 
 - **01-history-and-evolution.md** - Complete foundation document covering Podman's journey
+- **02-technology-stack-and-dependencies.md** - Architecture, dependencies, and platform compatibility
+- **03-podman-vs-alternatives.md** - Comprehensive comparative analysis of container runtimes and deployment approaches
 - **LEARNING_PLAN.md** - [Internal] Detailed work package structure and implementation tracking
 - **QUALITY_GUIDELINES.md** - [Internal] Documentation standards and contributing guidelines
 
 ## 🚀 Getting Started
 
 1. Start with [`01-history-and-evolution.md`](01-history-and-evolution.md) to understand Podman's foundation
-2. Review [`LEARNING_PLAN.md`](LEARNING_PLAN.md) to see the overall learning journey structure
-3. Follow quality guidelines in [`QUALITY_GUIDELINES.md`](QUALITY_GUIDELINES.md) if contributing
+2. Explore [`02-technology-stack-and-dependencies.md`](02-technology-stack-and-dependencies.md) for technical architecture details
+3. Read [`03-podman-vs-alternatives.md`](03-podman-vs-alternatives.md) for comprehensive comparisons and decision guidance
+4. Review [`LEARNING_PLAN.md`](LEARNING_PLAN.md) to see the overall learning journey structure
+5. Follow quality guidelines in [`QUALITY_GUIDELINES.md`](QUALITY_GUIDELINES.md) if contributing
 
 ## ✅ Quality Standards
 

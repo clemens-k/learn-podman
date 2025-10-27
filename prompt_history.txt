@@ -63,3 +63,16 @@ it short, don't add additional chapter, but just mark the WP1 as completed.
 
 Please add some (not too many) emojis to the README.md and LEARNING_PATH.md.
 For each emoji, present options and let me choose.
+
+---
+
+Please work on WP2: Technology Stack and Dependencies. Update the
+LEARNING_PLAN.md to indicate WP2 is done and create a commit to make sure
+all quality tests pass.
+
+---
+
+Please focus on WP3: Comparative Analysis: do the research, document your
+results in a markdown, update the readme.md file to offer this content to the
+readers. Finally update the LEARNING_PLAN.md to indicate WP3 is done and create
+a commit to make sure all quality tests pass.

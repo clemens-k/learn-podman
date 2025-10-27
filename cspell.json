@@ -93,7 +93,13 @@
         "nodev",
         "libexec",
         "libseccomp",
-        "sandboxing"
+        "sandboxing",
+        "slirp",
+        "netns",
+        "myapp",
+        "crictl",
+        "apptainer",
+        "kata"
     ],
     "ignorePaths": [
         "node_modules/**",
